@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="Chedilex, portfolio, software projects, web development, mobile apps, POS system, medical software, custom software solutions">
+    <meta name="description"
+        content="Explore Chedilex Software Solutions' portfolio of innovative projects — from full-stack platforms and POS systems to medical software and custom web applications.">
+    <meta name="author" content="Eng. Tony EL Chediac">
+    <meta name="theme-color" content="#1d4ed8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chedilex | Portfolio</title>
+    <link rel="icon" type="image/png" href="images/chedilex-logo-removebg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+</head>
+
+<body>
+
+    <!-- loader code -->
+    <div class="loaderMain" id="loader">
+        <div class="container">
+            <div class="loader">
+                <img src="images/chedilex.new.logo.jpeg" alt="logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- back to top button -->
+    <button id="backToTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pageHero">
+        <div class="pagehero-content">
+            <div class="section-title">
+                <h2>Our Portfolio</h2>
+                <p>Explore our recent projects and solutions that showcase our expertise in creating impactful digital
+                    products.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Stats -->
+    <section class="section">
+        <div class="container">
+            <div class="portfolio-stats no-animation">
+                <div class="portfolio-stat-card">
+                    <div class="stat-number no-animation">43+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="portfolio-stat-card">
+                    <div class="stat-number no-animation">6+</div>
+                    <div class="stat-label">Industries Served</div>
+                </div>
+                <div class="portfolio-stat-card">
+                    <div class="stat-number no-animation">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="portfolio-stat-card">
+                    <div class="stat-number no-animation">4+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Projects -->
+    <section class="section sectionLight" id="projects">
+        <div class="container no-animation">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <p>A selection of our most impactful work across industries.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="full-stack">Full-Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="ui-design">UI Design</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="portfolio-page-grid no-animation">
+
+                <!-- E-Agenda Platform -->
+                <div class="portfolio-page-card" data-category="full-stack">
+                    <div class="portfolio-card-header no-animation">
+                        <div class="portfolio-card-icon no-animation">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>E-Agenda Platform</h3>
+                    </div>
+                    <div class="portfolio-card-body no-animation">
+                        <p>A full-featured online SIS agenda platform with AI-powered recommendations, real-time
+                            inventory management, and seamless payment integration. Designed to streamline academic
+                            scheduling for universities.</p>
+                        <div class="portfolio-card-tech no-animation">
+                            <span>Full-Stack</span>
+                            <span>AI Integration</span>
+                            <span>Real-Time</span>
+                        </div>
+                        <div class="portfolio-card-status completed no-animation">
+                            <i class="fas fa-circle"></i> Completed
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MediCareX System -->
+                <div class="portfolio-page-card" data-category="full-stack">
+                    <div class="portfolio-card-header no-animation">
+                        <div class="portfolio-card-icon no-animation">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>MediCareX System</h3>
+                    </div>
+                    <div class="portfolio-card-body no-animation">
+                        <p>A comprehensive medical center management system for hospitals with patient records,
+                            appointment scheduling, and telemedicine capabilities. HIPAA-compliant data architecture
+                            with
+                            role-based access control.</p>
+                        <div class="portfolio-card-tech no-animation">
+                            <span>Full-Stack</span>
+                            <span>Healthcare</span>
+                            <span>Secure</span>
+                        </div>
+                        <div class="portfolio-card-status in-progress no-animation">
+                            <i class="fas fa-spinner fa-spin"></i> In- Progress
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POS System -->
+                <div class="portfolio-page-card" data-category="full-stack">
+                    <div class="portfolio-card-header no-animation">
+                        <div class="portfolio-card-icon no-animation">
+                            <i class="fas fa-cash-register"></i>
+                        </div>
+                        <h3>POS System</h3>
+                    </div>
+                    <div class="portfolio-card-body no-animation">
+                        <p>An offline-first POS system for retail stores, restaurants, and small businesses with
+                            inventory management, sales tracking, and customer management capabilities. Works without
+                            internet using local storage sync.</p>
+                        <div class="portfolio-card-tech no-animation">
+                            <span>Full-Stack</span>
+                            <span>Local Storage</span>
+                            <span>Offline-First</span>
+                        </div>
+                        <div class="portfolio-card-status completed no-animation">
+                            <i class="fas fa-circle"></i> Completed
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Website -->
+                <div class="portfolio-page-card" data-category="full-stack">
+                    <div class="portfolio-card-header no-animation">
+                        <div class="portfolio-card-icon no-animation">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3>News Website</h3>
+                    </div>
+                    <div class="portfolio-card-body no-animation">
+                        <p>Advanced news platform with real-time data visualization, predictive analytics, and automated
+                            reporting for media firms. Features a dynamic CMS and multi-language support.</p>
+                        <div class="portfolio-card-tech no-animation">
+                            <span>Full-Stack</span>
+                            <span>CMS</span>
+                            <span>Analytics</span>
+                        </div>
+                        <div class="portfolio-card-status completed no-animation">
+                            <i class="fas fa-circle"></i> Completed
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TV Website -->
+                <div class="portfolio-page-card" data-category="frontend">
+                    <div class="portfolio-card-header no-animation">
+                        <div class="portfolio-card-icon no-animation">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3>TV Website</h3>
+                    </div>
+                    <div class="portfolio-card-body no-animation">
+                        <p>High-performance frontend infrastructure with real-time data streaming, secure content
+                            delivery, and automated scaling for Node.js environments. Optimized for high-traffic media
+                            consumption.</p>
+                        <div class="portfolio-card-tech no-animation">
+                            <span>Frontend</span>
+                        </div>
+                        <div class="portfolio-card-status completed no-animation">
+                            <i class="fas fa-circle"></i> Completed
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Website -->
+                <div class="portfolio-page-card" data-category="fullstack">
+                    <div class="portfolio-card-header no-animation">
+                        <div class="portfolio-card-icon no-animation">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>E-commerce Website</h3>
+                    </div>
+                    <div class="portfolio-card-body no-animation">
+                        <p>A scalable digital storefront featuring payment gateway integration, dynamic inventory
+                            management, user authentication, and an intuitive checkout workflow.</p>
+                        <div class="portfolio-card-tech no-animation">
+                            <span>Fullstack</span>
+                            <span>Local Storage</span>
+                            <span>CMS</span>
+                            <span>Analytics</span>
+                        </div>
+                        <div class="portfolio-card-status in-progress no-animation">
+                            <i class="fas fa-spinner fa-spin"></i> In Progress
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Menu Software -->
+                <div class="portfolio-page-card" data-category="ui-design">
+                    <div class="portfolio-card-header no-animation">
+                        <div class="portfolio-card-icon no-animation">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Online Menu Software</h3>
+                    </div>
+                    <div class="portfolio-card-body no-animation">
+                        <p>A full-featured online menu platform with real-time updates accessed by the restaurant
+                            itself. Free access for restaurants with QR code integration and mobile-optimized responsive
+                            design.</p>
+                        <div class="portfolio-card-tech no-animation">
+                            <span>UI Design</span>
+                            <span>QR Integration</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="portfolio-card-status in-progress no-animation">
+                            <i class="fas fa-spinner fa-spin"></i> In- Progress
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Chedilex</h3>
+                    <p>Transforming businesses through innovative software engineering solutions since 2021.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/company/chedilex"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.threads.net/@chedilex"><i class="fa-brands fa-threads"></i></a>
+                        <a href="https://instagram.com/chedilex"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column cdnk">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>1505 Str, 256 Bld, Bellani Batroun, NL. LB.</p>
+                    <p style="display: flex;"><i class="fas fa-phone"></i><a href="tel:+96171096971">+961 71 09 69
+                            71</a></p>
+                    <p style="display: flex;"><i class="fas fa-envelope"></i><a
+                            href="mailto:chedilex@gmail.com">chedilex@gmail.com</a></p>
+                    <p><i class="fas fa-clock"></i>Mon-Fri: 9 AM - 6 PM GMT</p>
+                </div>
+            </div>
+            <div class="copyright no-animation">
+                <p>&copy; 2026 Chedilex Software Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.6"></script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/particles.js"></script>
+
+    <!-- Portfolio Filter Logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterBtns = document.querySelectorAll(".filter-btn");
+            const cards = document.querySelectorAll(".portfolio-page-card");
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const filter = btn.getAttribute("data-filter");
+
+                    cards.forEach(card => {
+                        if (filter === "all" || card.getAttribute("data-category") === filter) {
+                            card.classList.remove("hidden");
+                        } else {
+                            card.classList.add("hidden");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
