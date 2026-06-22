@@ -60,7 +60,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
@@ -77,17 +77,17 @@ body {
 @keyframes divAnimations {
   from {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateY(200px);
   }
 
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
 div {
-  animation: divAnimations 0.5s ease-in-out;
+  animation: divAnimations 1s ease-in-out;
   animation-timeline: view();
   animation-range: entry 0 cover 20%;
 }
@@ -145,34 +145,12 @@ div {
 }
 
 .pageHero {
-  height: 50dvh;
+  min-height: 30dvh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../images/heroWhite.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
-}
-
-body.dark-mode .pageHero {
-  background: url("../images/heroDark.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.pageHero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--bg-color);
-  opacity: 0.6;
 }
 
 .pagehero-content {
@@ -304,6 +282,14 @@ header {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.08);
 }
 
+#header.header-scrolled {
+  background-color: var(--light);
+}
+
+#headerBack.header-scrolled {
+  background-color: var(--light);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -347,14 +333,11 @@ header {
 }
 
 .nav-links a:hover,
-.nav-links details summary:hover,
-.nav-links a.active,
-.nav-links details summary.active {
+.nav-links a.active {
   color: var(--primary);
 }
 
-.nav-links a::after,
-.nav-links details summary::after {
+.nav-links a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -366,56 +349,14 @@ header {
 }
 
 .nav-links a:hover::after,
-.nav-links details summary:hover::after,
-.nav-links a.active::after,
-.nav-links details summary.active::after {
+.nav-links a.active::after {
   width: 100%;
-}
-
-.nav-links details {
-  position: relative;
-  font-weight: 500;
-}
-
-.nav-links details summary {
-  list-style: none;
-  cursor: pointer;
-  display: flex;
-  gap: 5px;
-  align-items: center;
 }
 
 .icons-content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.header-details-content {
-  background-color: var(--bg-color);
-  position: absolute;
-  top: 35px;
-  left: 30px;
-  z-index: 1;
-  width: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px 5px 20px 5px;
-  animation: dropdown 0.3s ease-in-out;
-}
-
-@keyframes dropdown {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 .mobile-menu-btn {
@@ -429,6 +370,7 @@ header {
   color: var(--secondary);
   cursor: pointer;
 }
+
 .mode-btn {
   display: flex;
   justify-content: center;
@@ -612,7 +554,7 @@ header {
 }
 
 /* founder section */
-.founder-info{
+.founder-info {
   background: var(--bg-color);
   padding: 40px;
   box-shadow: var(--shadow-lg);
@@ -628,21 +570,21 @@ header {
   border-radius: 50%;
 }
 
-.founder-bio{
+.founder-bio {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.founder-bio h3{
+.founder-bio h3 {
   margin-bottom: 20px;
   color: var(--primary-dark);
   position: relative;
   display: inline-block;
 }
 
-.founder-bio h3::before{
+.founder-bio h3::before {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -652,7 +594,7 @@ header {
   background: var(--h2-line-color);
 }
 
-.founder-bio p{
+.founder-bio p {
   text-align: center;
 }
 
@@ -971,18 +913,18 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 50px;
+  gap: 10px;
+  margin: 0 auto 50px auto;
 }
 
 .filter-btn {
-  padding: 10px 24px;
+  padding: 5px 10px;
   border: 2px solid var(--primary);
   background: transparent;
   color: var(--primary);
   border-radius: 30px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 12px;
   cursor: pointer;
   transition: var(--transition);
   font-family: "Orbitron", sans-serif;
@@ -1167,10 +1109,11 @@ form {
   display: flex;
   justify-content: start;
   align-items: start;
-  gap: 5px;
+  gap: 10px;
   flex-direction: column;
   width: 100%;
   max-width: 700px;
+  padding: 20px;
 }
 
 form label {
@@ -1207,7 +1150,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  transform: translateY(-3px);
+  transform: translateY(-10px);
 }
 
 /* Testimonials Section */
@@ -1424,7 +1367,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 910px) {
   .nav-links {
     display: none;
     position: absolute;

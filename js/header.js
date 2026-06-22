@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const header = document.getElementById("header");
-  if (header) {
-    header.innerHTML = `
+  const headerMain = document.getElementById("headerMain");
+  if (headerMain) {
+    headerMain.innerHTML = `
             <div class="container no-animation">
             <nav class="navbar">
                 <a href="#" class="logo">
@@ -9,15 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 </a>
                 <div class="nav-links no-animation" id="navLinks">
                     <a aria-label="go to home section" href="index.html">Home</a>
-                    <details id="headerDetails">
-                        <summary>About<i class="fa-solid fa-angle-down"></i></summary>
-                        <div class="header-details-content no-animation">
-                            <a aria-label="go to about us section" href="about.html">About Us</a>
-                            <a aria-label="go to founder section" href="founder.html">Founder</a>
-                        </div>
-                    </details>
+                    <a aria-label="go to about section" href="about.html">About</a>
                     <a aria-label="go to portfolio section" href="portfolio.html">Portfolio</a>
-                    <a aria-label="go to news section" href="news.html">News & Initiatives</a>
+                    <a aria-label="go to news section" href="news.html">News</a>
                     <a aria-label="go to contact section" href="contact.html">Contact</a>
                 </div>
                 <div class="no-animation">
@@ -84,16 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // details code
-  const headerDetails = document.getElementById("headerDetails");
-  if (headerDetails) {
-    window.addEventListener("click", (event) => {
-      if (!headerDetails.contains(event.target)) {
-        headerDetails.removeAttribute("open");
-      }
-    });
-  }
-
   // Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const navLinks = document.getElementById("navLinks");
@@ -116,15 +100,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Header scroll effect
-  if (header) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        header.classList.add("header-scrolled");
-      } else {
-        header.classList.remove("header-scrolled");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      if (headerMain) {
+        headerMain.classList.add("header-scrolled");
       }
-    });
-  }
+      if (headerBack) {
+        headerBack.classList.add("header-scrolled");
+      }
+    } else {
+      if (headerMain) {
+        headerMain.classList.remove("header-scrolled");
+      }
+      if (headerBack) {
+        headerBack.classList.remove("header-scrolled");
+      }
+    }
+  });
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
