@@ -308,27 +308,24 @@
                 </h2>
                 <p>See latest news and initiatives at Chedilex.</p>
             </div>
-            <div class="news-content">
-                <div class="news-container">
-                    <div class="news" id="news-article"></div>
-                    <div class="news-dots no-animation" id="news-dots"></div>
-                </div>
-                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                        const newsContainer = document.getElementById("news-article");
-                        const dotsContainer = document.getElementById("news-dots");
+            <div class="news-carousel" id="news-article">
+                <!-- News Cards will be dynamically inserted here -->
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const newsContainer = document.getElementById("news-article");
 
-                        fetch("json/articles.json")
-                            .then(res => res.json())
-                            .then(allData => {
-                                const data = allData.slice(0, 3);
-                                let output = "";
+                    fetch("json/articles.json")
+                        .then(res => res.json())
+                        .then(allData => {
+                            const data = allData.slice(0, 3);
+                            let output = "";
 
-                                data.forEach((article, index) => {
-                                    const displayImage = (article.image && article.image.trim() !== "")
-                                        ? article.image
-                                        : 'images/chedilex.new.logo.jpeg';
-                                    output += `
+                            data.forEach((article, index) => {
+                                const displayImage = (article.image && article.image.trim() !== "")
+                                    ? article.image
+                                    : 'images/chedilex.new.logo.jpeg';
+                                output += `
                         <div class="news-card" data-index="${index}">
                             <div class="news-image">
                                 <img src="${displayImage}" alt="${article.title}">
@@ -336,79 +333,15 @@
                             <div class="news-info">
                                 <h3 class="news-title">${article.title}</h3>
                                 <p class="news-date">${article.day}</p>
-                                <a href="article.html?id=${article.id}" class="news-link">Read More</a>
+                                <a href="article.html?id=${article.id}" class="news-link">Read More →</a>
                             </div>
                         </div>`;
-                                });
-
-                                newsContainer.innerHTML = output;
-
-                                let currentNumPages = 0;
-
-                                const updateDots = () => {
-                                    if (!newsContainer.children.length) return;
-
-                                    const card = newsContainer.querySelector('.news-card');
-                                    if (!card) return;
-
-                                    const style = window.getComputedStyle(newsContainer);
-                                    const gap = parseFloat(style.gap) || 30;
-                                    const cardWidth = card.offsetWidth + gap;
-                                    const cardsPerView = Math.round(newsContainer.offsetWidth / cardWidth) || 1;
-                                    const numPages = Math.ceil(data.length / cardsPerView);
-
-                                    if (currentNumPages !== numPages) {
-                                        currentNumPages = numPages;
-                                        let dotsOutput = "";
-                                        for (let i = 0; i < numPages; i++) {
-                                            dotsOutput += `<span class="dot ${i === 0 ? 'active' : ''}" onclick="scrollToPage(${i})"></span>`;
-                                        }
-                                        dotsContainer.innerHTML = dotsOutput;
-                                    }
-
-                                    updateActiveDot();
-                                };
-
-                                const updateActiveDot = () => {
-                                    if (newsContainer.offsetWidth === 0 || currentNumPages === 0) return;
-
-                                    const maxScrollLeft = newsContainer.scrollWidth - newsContainer.offsetWidth;
-                                    let index;
-
-                                    // Highlight last dot if scrolled to the end (allow 1px margin)
-                                    if (Math.ceil(newsContainer.scrollLeft) >= maxScrollLeft - 1) {
-                                        index = currentNumPages - 1;
-                                    } else {
-                                        index = Math.round(newsContainer.scrollLeft / newsContainer.offsetWidth);
-                                    }
-
-                                    document.querySelectorAll('.dot').forEach((dot, i) => {
-                                        dot.classList.toggle('active', i === index);
-                                    });
-                                };
-
-                                // Sync dots with manual scrolling
-                                newsContainer.addEventListener('scroll', updateActiveDot);
-
-                                // Update dots on window resize
-                                window.addEventListener('resize', updateDots);
-
-                                // Initial dots rendering
-                                setTimeout(updateDots, 100);
-                            })
-                            .catch(error => console.log("Error fetching data:", error));
-                    });
-
-                    // Function to scroll when clicking a dot
-                    function scrollToPage(index) {
-                        const container = document.getElementById("news-article");
-                        container.scrollTo({
-                            left: index * container.offsetWidth,
-                            behavior: 'smooth'
-                        });
-                    }
-                </script>
-            </div>
+                            });
+                            newsContainer.innerHTML = output;
+                        })
+                        .catch(error => console.log("Error fetching data:", error));
+                });
+            </script>
         </div>
     </section>
 

@@ -30,5 +30,21 @@
     "title": "Founder of Chedilex invited to participate in the launch of ARC in AOU Lebanon",
     "description": "Chedilex founder invited to participate in the launch of the Annual Robotics Competition (ARC) at the Arab Open University Tripoli branch in Lebanon. This initiative aims to foster innovation, and development in the field of robotics, providing a platform for students and professionals to explore cutting-edge technologies and their applications.",
     "link": ""
+    },
+    {
+    "id": 5,
+    "image": "clients/ieeeaou.png",
+    "title": "What happened on the IEEE AOU website?",
+    "day": "Mar 21, 2026",
+    "description": "The IEEE AOU website was hacked because its design was outdated. A new user interface was designed by Chedilex, which is now managing the official website for the student branch at Arab Open University.",
+    "link": "https://ieee.aou.edu.lb"
+    },
+    {
+    "id": 6,
+    "image": "",
+    "day": "Feb 12, 2026",
+    "title": "Founder of Chedilex invited to participate in the launch of ARC in AOU Lebanon",
+    "description": "Chedilex founder invited to participate in the launch of the Annual Robotics Competition (ARC) at the Arab Open University Tripoli branch in Lebanon. This initiative aims to foster innovation, and development in the field of robotics, providing a platform for students and professionals to explore cutting-edge technologies and their applications.",
+    "link": ""
     }
 ]
