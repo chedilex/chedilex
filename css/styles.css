@@ -1090,6 +1090,50 @@ header {
 }
 
 /* Form Code */
+.contact-double-content {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-details-content {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 35px;
+}
+
+.data {
+  width: 100%;
+  padding: 20px;
+  background: var(--primary-light);
+  border-radius: var(--border-radius);
+}
+
+.data .titledata {
+  font-weight: 600;
+  background: var(--h2-line-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.data p i {
+  color: var(--primary);
+  background: var(--h2-line-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 10px;
+}
+
+.data p a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
 .form-content {
   display: flex;
   justify-content: center;
@@ -1105,7 +1149,6 @@ form {
   flex-direction: column;
   width: 100%;
   max-width: 700px;
-  padding: 20px;
 }
 
 form label {
@@ -1435,6 +1478,10 @@ footer {
   .stats-container {
     gap: 0;
     justify-content: space-between;
+  }
+
+  .contact-double-content {
+    flex-direction: column;
   }
 }
 /* Cookie Banner Styles */

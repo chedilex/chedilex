@@ -44,73 +44,69 @@
     <header id="headerMain">
     </header>
 
+    <!-- Hero Section -->
+    <section class="pageHero">
+        <div class="pagehero-content">
+            <div class="section-title">
+                <h2>Contact US</h2>
+                <p>We welcome new opportunities and invite you to reach out through the form below.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- contact us -->
     <section class="section">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact US</h2>
-                <p>We're always open to new opportunities and would love to hear from you. Please fill out the form
-                    below and we'll get back to you as soon as possible.</p>
-            </div>
-            <div class="form-content">
-                <form id="contact-form" action="https://formly.email/submit" method="POST">
-                    <input type="hidden" name="access_key" value="4b71a068dc2045fe86bb5976c70c0301">
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_username" tabindex="-1" autocomplete="off">
+            <div class="contact-double-content">
+                <!-- content 1 -->
+                <div class="contact-details-content">
+                    <div class="data">
+                        <p class="titledata">For Project</p>
+                        <p><i class="fa-solid fa-envelope"></i><a
+                                href="mailto:chedilex@gmail.com">chedilex@gmail.com</a></p>
                     </div>
-                    <input type="hidden" name="subject" value="New Contact Form Submission from Chedilex Website">
+                    <div class="data">
+                        <p class="titledata">For Support Call</p>
+                        <p><i class="fa-solid fa-phone"></i><a href="tel:+96171096971">+961 71 09 69 71</a></p>
+                    </div>
+                </div>
+                <!-- content 2 -->
+                <div class="form-content">
+                    <form id="contact-form" action="https://formly.email/submit" method="POST">
+                        <input type="hidden" name="access_key" value="4b71a068dc2045fe86bb5976c70c0301">
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_username" tabindex="-1" autocomplete="off">
+                        </div>
+                        <input type="hidden" name="subject" value="New Contact Form Submission from Chedilex Website">
 
-                    <label for="name">Full Name</label>
-                    <input type="text" name="name" id="name" required>
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="name" required>
 
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
 
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" name="phone" id="phone" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" required>
 
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="4" required></textarea>
-                    <p id="showMessage"></p>
-                    <input type="submit" value="Send Message">
-                </form>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4" required></textarea>
+                        <p id="showMessage"></p>
+                        <input type="submit" value="Send Message">
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Chedilex</h3>
-                    <p>Transforming businesses through innovative software engineering solutions since 2021.</p>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/company/chedilex"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.threads.net/@chedilex"><i class="fa-brands fa-threads"></i></a>
-                        <a href="https://instagram.com/chedilex"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column cdnk">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i>1505 Str, 256 Bld, Bellani Batroun, NL. LB.</p>
-                    <p style="display: flex;"><i class="fas fa-phone"></i><a href="tel:+96171096971">+961 71 09 69
-                            71</a></p>
-                    <p style="display: flex;"><i class="fas fa-envelope"></i><a
-                            href="mailto:chedilex@gmail.com">chedilex@gmail.com</a></p>
-                    <p><i class="fas fa-clock"></i>Mon-Fri: 9 AM - 6 PM GMT</p>
-                </div>
-            </div>
-            <div class="copyright no-animation">
-                <p>&copy; 2026 Chedilex Software Solutions. All rights reserved.</p>
-            </div>
-        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.6"></script>
     <script src="js/script.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/particles.js"></script>
 </body>
