@@ -553,51 +553,6 @@ header {
   transform: scale(1.05);
 }
 
-/* founder section */
-.founder-info {
-  background: var(--bg-color);
-  padding: 40px;
-  box-shadow: var(--shadow-lg);
-  border-radius: var(--border-radius);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.founder-info img {
-  border-radius: 50%;
-}
-
-.founder-bio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.founder-bio h3 {
-  margin-bottom: 20px;
-  color: var(--primary-dark);
-  position: relative;
-  display: inline-block;
-}
-
-.founder-bio h3::before {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--h2-line-color);
-}
-
-.founder-bio p {
-  text-align: center;
-}
-
 /* chedilex bird */
 .chedilex-bird {
   width: 100%;
