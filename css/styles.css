@@ -1482,6 +1482,11 @@ footer {
 
   .contact-double-content {
     flex-direction: column;
+    gap: 50px;
+  }
+
+  .​contact-details-content{
+    padding-top: 0;
   }
 }
 /* Cookie Banner Styles */
