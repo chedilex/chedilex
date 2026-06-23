@@ -1128,10 +1128,17 @@ header {
   margin-right: 10px;
 }
 
-.data p a {
+.data a {
+  display: inline-block;
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
+  transition: var(--transition);
+}
+
+.data a:hover {
+  color: var(--primary);
+  transform: translateX(20px);
 }
 
 .form-content {
@@ -1485,7 +1492,7 @@ footer {
     gap: 50px;
   }
 
-  .​contact-details-content{
+  .contact-details-content {
     padding-top: 0;
   }
 }
