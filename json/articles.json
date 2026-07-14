@@ -1,5 +1,13 @@
 [
-        {
+    {
+    "id": 5,
+    "image": "article-images/assiaTicketing.png",
+    "day": "Jul 14, 2026",
+    "title": "Ticketing System Proudly Supports Assia Street Festival.",
+    "description": "Our Ticketing System was developed as a sponsoring contribution to the Assia Street Festival, providing visitors with a fast, secure, and seamless way to book event tickets online. This initiative reflects our commitment to supporting local events through innovative digital solutions and enhancing the overall festival experience.",
+    "link": ""
+    },
+    {
     "id": 1,
     "image": "article-images/tonyARC.png",
     "day": "Feb 12, 2026",

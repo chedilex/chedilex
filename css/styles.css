@@ -600,14 +600,6 @@ header {
     translate: -100%;
   }
 }
-@keyframes reverseinfinityscroll {
-  from {
-    translate: -100%;
-  }
-  to {
-    translate: 0;
-  }
-}
 
 .logos {
   width: 100%;
@@ -620,16 +612,12 @@ header {
 }
 
 .logos-slide {
-  animation: infinityscroll 20s linear infinite;
+  animation: infinityscroll 10s linear infinite;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
   padding-right: 1em;
-}
-
-.reverse {
-  animation: reverseinfinityscroll 20s linear infinite;
 }
 
 .logos-slide img {
@@ -761,7 +749,7 @@ header {
 .more-link {
   margin-top: 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 
