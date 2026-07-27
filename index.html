@@ -24,6 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 </head>
 
+
+
 <body>
 
     <!-- loader code -->
@@ -175,12 +177,6 @@
                         experiences.</p>
                 </div>
 
-                <!-- <div class="service-card">
-        <i class="fas fa-cloud"></i>
-        <h3>Cloud Architecture</h3>
-        <p>Secure, scalable cloud infrastructure setups using AWS, Azure, and Google Cloud Platform.</p>
-    </div> -->
-
                 <div class="service-card">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Simple Cybersecurity</h3>
@@ -273,7 +269,6 @@
                     </div>
                 </div>
 
-
                 <div class="portfolio-item">
                     <div class="portfolio-content">
                         <h3>MediCareX System</h3>
@@ -312,16 +307,19 @@
     </section>
 
     <!-- News Section -->
-    <section class="section" id="news">
+    <section class="section news-section" id="news">
         <div class="container no-animation">
             <div class="section-title">
-                <h2>News & Initiatives
-                </h2>
-                <p>See latest news and initiatives at Chedilex.</p>
+                <h2>News & Initiatives</h2>
+                <p>Stay updated with our latest company news, insights, and technological advancements.</p>
             </div>
-            <div class="news-carousel" id="news-article">
-                <!-- News Cards will be dynamically inserted here -->
+
+            <div class="news-carousel-wrapper">
+                <div class="news-carousel" id="news-article">
+                    <!-- News Cards dynamically injected here -->
+                </div>
             </div>
+
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
                     const newsContainer = document.getElementById("news-article");
@@ -329,32 +327,43 @@
                     fetch("json/articles.json")
                         .then(res => res.json())
                         .then(allData => {
-                            const data = allData.slice(0, 3);
+                            const data = allData.slice(0, 5);
                             let output = "";
 
                             data.forEach((article, index) => {
                                 const displayImage = (article.image && article.image.trim() !== "")
                                     ? article.image
                                     : 'images/chedilex.new.logo.jpeg';
+
                                 output += `
-                        <div class="news-card" data-index="${index}">
-                            <div class="news-image">
-                                <img src="${displayImage}" alt="${article.title}">
-                            </div>
-                            <div class="news-info">
-                                <h3 class="news-title">${article.title}</h3>
-                                <p class="news-date">${article.day}</p>
-                                <a href="article.html?id=${article.id}" class="news-link">Read More →</a>
-                            </div>
-                        </div>`;
+                                <article class="news-card" data-index="${index}">
+                                    <div class="news-card-media">
+                                        <img src="${displayImage}" alt="${article.title}" loading="lazy">
+                                        <span class="news-badge">Insight</span>
+                                    </div>
+                                    <div class="news-card-body">
+                                        <div class="news-meta">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>${article.day}</span>
+                                        </div>
+                                        <h3 class="news-title">${article.title}</h3>
+                                        <a href="article.html?id=${article.id}" class="news-link">
+                                            Read Article <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </article>`;
                             });
                             newsContainer.innerHTML = output;
                         })
-                        .catch(error => console.log("Error fetching data:", error));
+                        .catch(error => console.error("Error fetching news data:", error));
                 });
             </script>
+
             <div class="more-link">
-                <a href="news.html" class="btn">More Articles →</a>
+                <a href="news.html" class="btn btn-outline">
+                    <span>Explore All Articles</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -396,10 +405,6 @@
                         delivered ahead of schedule."
                     </div>
                     <div class="testimonial-author">
-                        <!-- <div class="author-avatar">
-                            <img src="https://veolmedtech.com/uploads/testimonials/Dr._Luka_Matak1.jpeg"
-                                alt="img">
-                        </div> -->
                         <div class="author-info">
                             <h2>Dr. Michael K.</h2>
                             <p></p>
@@ -472,7 +477,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.6"></script>
     <script src="js/script.js"></script>
     <script src="js/header.js"></script>

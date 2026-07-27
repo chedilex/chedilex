@@ -56,8 +56,7 @@
     <section class="section" id="news">
         <div class="container no-animation">
             <!-- Grid container for news -->
-            <div id="all-news-container" class="no-animation"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            <div id="all-news-container" class="no-animation">
             </div>
 
             <script>
@@ -75,16 +74,22 @@
                                     : 'images/chedilex.new.logo.jpeg';
 
                                 output += `
-                    <div class="news-card" style="flex: auto; margin: 0; scroll-snap-align: none;" data-index="${index}">
-                        <div class="news-image">
-                            <img src="${displayImage}" alt="${article.title}" style="height: 200px;">
-                        </div>
-                        <div class="news-info">
-                            <h3 class="news-title">${article.title}</h3>
-                            <p class="news-date">${article.day}</p>
-                            <a href="article.html?id=${article.id}" class="news-link">Read More</a>
-                        </div>
-                    </div>`;
+                                <article class="news-card" data-index="${index}">
+                                    <div class="news-card-media">
+                                        <img src="${displayImage}" alt="${article.title}" loading="lazy">
+                                        <span class="news-badge">Insight</span>
+                                    </div>
+                                    <div class="news-card-body">
+                                        <div class="news-meta">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>${article.day}</span>
+                                        </div>
+                                        <h3 class="news-title">${article.title}</h3>
+                                        <a href="article.html?id=${article.id}" class="news-link">
+                                            Read Article <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </article>`;
                             });
 
                             newsContainer.innerHTML = output;

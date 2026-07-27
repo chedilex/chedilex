@@ -27,7 +27,7 @@
 
     <!-- loader code -->
     <div class="loaderMain" id="loader">
-        <div class="container">
+        <div class="container no-animation">
             <div class="loader">
                 <img src="images/chedilex.new.logo.jpeg" alt="logo">
             </div>
@@ -43,67 +43,53 @@
     <!-- Header & Navigation -->
     <header id="headerBack"></header>
 
-    <!-- Hero Section -->
-    <div class="container">
-        <section class="article-hero-title">
-            <div class="hero-content">
-                <h2 id="news-title-t"></h2>
-                <h6 id="article-date-t"></h6>
-            </div>
-        </section>
-    </div>
-
-    <div class="no-animation">
-        <div id="article-content">
-            <div class="container">
-                <p>Loading article...</p>
-
+    <!-- Article Hero / Header -->
+    <section class="article-hero-section">
+        <div class="container no-animation">
+            <div class="article-hero-title">
+                <h1 id="news-title-t">Loading Title...</h1>
+                <div class="article-meta-badge" id="article-date-container">
+                    <i class="far fa-calendar-alt"></i>
+                    <span id="article-date-t">---</span>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Main Content Body -->
+    <main class="article-wrapper">
+        <div class="container no-animation">
+            <div id="article-content">
+                <div class="article-loading">
+                    <i class="fas fa-circle-notch fa-spin"></i>
+                    <p>Loading article...</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container no-animation">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Chedilex</h3>
                     <p>Transforming businesses through innovative software engineering solutions since 2021.</p>
                     <div class="social-links">
-                        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-                        <a href="https://linkedin.com/company/chedilex"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.threads.net/@chedilex"><i class="fa-brands fa-threads"></i></a>
-                        <!-- <a href="#"><i class="fab fa-github"></i></a> -->
-                        <a href="https://instagram.com/chedilex"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/chedilex" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.threads.net/@chedilex" target="_blank" rel="noopener"><i class="fa-brands fa-threads"></i></a>
+                        <a href="https://instagram.com/chedilex" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <!-- <div class="footer-column">
-                    <h3>Services</h3>
-                    <a href="#">Web Development</a>
-                    <a href="#">Mobile Apps</a>
-                    <a href="#">UI/UX Design</a>
-                    <a href="#">Software Consulting</a>
-                    <a href="#">DevOps Solutions</a>
-                </div> -->
-                <!-- <div class="footer-column">
-                    <h3>Company</h3>
-                    <a href="#">About Us</a>
-                    <a href="#">Our Team</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact</a>
-                </div> -->
                 <div class="footer-column cdnk">
                     <h3>Contact Info</h3>
                     <p><i class="fas fa-map-marker-alt"></i>1505 Str, 256 Bld, Bellani Batroun, NL. LB.</p>
-                    <p style="display: flex;"><i class="fas fa-phone"></i><a href="tel:+96171096971">+961 71 09 69
-                            71</a></p>
-                    <p style="display: flex;"><i class="fas fa-envelope"></i><a
-                            href="mailto:chedilex@gmail.com">chedilex@gmail.com</a></p>
+                    <p style="display: flex;"><i class="fas fa-phone"></i><a href="tel:+96171096971">+961 71 09 69 71</a></p>
+                    <p style="display: flex;"><i class="fas fa-envelope"></i><a href="mailto:chedilex@gmail.com">chedilex@gmail.com</a></p>
                     <p><i class="fas fa-clock"></i>Mon-Fri: 9 AM - 6 PM GMT</p>
                 </div>
             </div>
-            <div class="copyright no-animation">
+            <div class="copyright">
                 <p>&copy; 2026 Chedilex Software Solutions. All rights reserved.</p>
             </div>
         </div>
@@ -116,7 +102,7 @@
             const contentContainer = document.getElementById("article-content");
 
             if (!articleId) {
-                contentContainer.innerHTML = "<p>Article not found.</p>";
+                contentContainer.innerHTML = `<div class="article-error"><p>Article not found.</p><a href="news.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Return to News</a></div>`;
                 return;
             }
 
@@ -130,39 +116,45 @@
                             ? article.image
                             : 'images/chedilex.new.logo.jpeg';
 
-                        const articleLink = (article.link !== "")
-                            ? `<br>
-                                <div class="link-container no-animation">
-                                        <i class="fa-solid fa-up-right-from-square"></i>
-                                        <a href="${article.link}">Visit the Site</a>
-                                    </div>`
+                        const articleLink = (article.link && article.link.trim() !== "")
+                            ? `
+                                <div class="link-container">
+                                    <a href="${article.link}" target="_blank" rel="noopener" class="article-external-btn">
+                                        <span>Visit Associated Link</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>`
                             : "";
 
-                        const newsTitleT = document.getElementById("news-title-t").textContent = article.title;
-                        const articleDateT = document.getElementById("article-date-t").textContent = article.day;
+                        document.getElementById("news-title-t").textContent = article.title;
+                        document.getElementById("article-date-t").textContent = article.day;
+
                         const formattedDescription = article.description.replace(/\n/g, "<br>");
 
                         contentContainer.innerHTML = `
-                        <article class="article-content">
-                            <div class="container">
-                                <img src="${displayImage}" alt="${article.title || 'News'}" class="article-main-img">
-                                <article class="full-article">
-                                    <p class="full-description">${formattedDescription}</p>
+                            <article class="article-card-main">
+                                <div class="article-media-wrapper">
+                                    <img src="${displayImage}" alt="${article.title || 'News'}" class="article-main-img">
+                                </div>
+                                <div class="full-article">
+                                    <div class="full-description">${formattedDescription}</div>
                                     ${articleLink}
-                                    <p class="published">Published: Chedilex Social Media Team</p>
-                                </article>
-                            </div>
-                        </article>
-                    `;
+                                    <div class="published-footer">
+                                        <p><i class="fas fa-newspaper"></i> Published by</p>
+                                        <strong>Chedilex Social Media Team</strong>
+                                    </div>
+                                </div>
+                            </article>
+                        `;
 
-                        document.title = article.title || "Article";
+                        document.title = `${article.title} | Chedilex`;
                     } else {
-                        contentContainer.innerHTML = "<p>Article not found.</p>";
+                        contentContainer.innerHTML = `<div class="article-error"><p>Article not found.</p><a href="news.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Return to News</a></div>`;
                     }
                 })
                 .catch(error => {
-                    console.error("Error:", error);
-                    contentContainer.innerHTML = "<p>Unable to load article.</p>";
+                    console.error("Error fetching article:", error);
+                    contentContainer.innerHTML = `<div class="article-error"><p>Unable to load article content.</p><a href="news.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Return to News</a></div>`;
                 });
         });
     </script>
