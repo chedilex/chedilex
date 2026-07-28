@@ -327,7 +327,7 @@
                     fetch("json/articles.json")
                         .then(res => res.json())
                         .then(allData => {
-                            const data = allData.slice(0, 5);
+                            const data = allData.slice(0, 3);
                             let output = "";
 
                             data.forEach((article, index) => {
