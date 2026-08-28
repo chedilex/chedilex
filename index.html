@@ -306,6 +306,81 @@
         </div>
     </section>
 
+    <!-- Digital Flyers & Product Overviews Section -->
+    <section class="section flyers-section" id="flyers">
+        <div class="container no-animation">
+            <div class="section-title">
+                <h2>Product Overviews</h2>
+                <p>Check our digital service flyers and product overviews for a quick look at our features and
+                    solutions.</p>
+            </div>
+
+            <div class="portfolio-grid no-animation">
+                <!-- Flyer Item -->
+                <div class="portfolio-item">
+                    <div class="flyer-media">
+                        <img src="flyer-images/bibliotec.webp" alt="Flyer" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Bibliotec — Student Information System</h3>
+                        <p>A high-level visual breakdown of our modern students information system platform..</p>
+                        <div class="flyer-actions no-animation">
+                            <a href="flyer-images/bibliotec.webp" class="btn btn-outline">
+                                <i class="fas fa-eye"></i> View Full Flyer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flyer Item -->
+                <div class="portfolio-item">
+                    <div class="flyer-media">
+                        <img src="flyer-images/digital menu.webp" alt="Flyer" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Digital Menu</h3>
+                        <p>A high-level visual breakdown of our modern digital menu platform.</p>
+                        <div class="flyer-actions no-animation">
+                            <a href="flyer-images/digital menu.webp" class="btn btn-outline">
+                                <i class="fas fa-eye"></i> View Full Flyer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flyer Item -->
+                <div class="portfolio-item">
+                    <div class="flyer-media">
+                        <img src="flyer-images/news website.webp" alt="Flyer" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>News Websites</h3>
+                        <p>A high-level visual breakdown of our modern news website platform.</p>
+                        <div class="flyer-actions no-animation">
+                            <a href="flyer-images/news website.webp" class="btn btn-outline">
+                                <i class="fas fa-eye"></i> View Full Flyer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flyer Item -->
+                <div class="portfolio-item">
+                    <div class="flyer-media">
+                        <img src="flyer-images/tazkara.webp" alt="Flyer" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Tazkara - Ticketing Management System</h3>
+                        <p>A high-level visual breakdown of our modern ticketing management system platform.</p>
+                        <div class="flyer-actions no-animation">
+                            <a href="flyer-images/tazkara.webp" class="btn btn-outline">
+                                <i class="fas fa-eye"></i> View Full Flyer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- News Section -->
     <section class="section news-section" id="news">
         <div class="container no-animation">
@@ -324,7 +399,7 @@
                 document.addEventListener("DOMContentLoaded", () => {
                     const newsContainer = document.getElementById("news-article");
 
-                    fetch("json/articles.json")
+                    fetch("articles/articles.json")
                         .then(res => res.json())
                         .then(allData => {
                             const data = allData.slice(0, 3);

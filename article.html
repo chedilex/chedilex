@@ -83,7 +83,7 @@
                 return;
             }
 
-            fetch("json/articles.json")
+            fetch("articles/articles.json")
                 .then(res => res.json())
                 .then(data => {
                     const article = data.find(item => item.id == articleId);

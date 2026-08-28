@@ -708,7 +708,6 @@ header {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   width: 100%;
-  max-height: 480px;
   background: var(--primary-light);
   display: flex;
   justify-content: center;
@@ -718,8 +717,7 @@ header {
 
 .article-main-img {
   width: 100%;
-  max-height: 480px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -747,7 +745,6 @@ header {
   font-size: 0.95rem;
   text-decoration: none;
   transition: var(--transition);
-
 }
 
 .article-external-btn:hover {
@@ -795,7 +792,7 @@ header {
   margin-bottom: 20px;
 }
 
-#all-news-container{
+#all-news-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -877,6 +874,10 @@ header {
   flex-wrap: wrap;
   gap: 10px;
   margin: 0 auto 50px auto;
+}
+
+.flyer-actions {
+  margin-top: 30px;
 }
 
 .filter-btn {
@@ -1408,13 +1409,15 @@ footer {
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .news-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary);
 }
 
 /* Card Media */
@@ -1429,7 +1432,7 @@ footer {
 .news-card-media img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
@@ -1489,6 +1492,7 @@ footer {
 }
 
 .news-link {
+  width: max-content;
   margin-top: auto;
   display: inline-flex;
   align-items: center;
@@ -1513,44 +1517,24 @@ footer {
   transform: translateX(4px);
 }
 
-/* Native Scroll Buttons */
-.news-carousel::scroll-button(right),
-.news-carousel::scroll-button(left) {
-  position: absolute;
-  position-anchor: --newsCarousel;
-  position-area: top right;
-  translate: -100% -50px;
-  background: var(--card-bg);
-  color: var(--secondary);
-  border: 1px solid var(--gray-light);
-  width: 40px;
-  height: 40px;
-  font-size: 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-  z-index: 5;
+/* flyers section */
+.flyer-media {
+  width: 100%;
+  max-height: 320px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
 }
 
-.news-carousel::scroll-button(left) {
-  translate: -160% -50px;
+.flyer-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
 }
 
-.news-carousel::scroll-button(right):hover,
-.news-carousel::scroll-button(left):hover {
-  background: var(--primary);
-  color: #ffffff;
-  border-color: var(--primary);
-}
-
-.news-carousel::scroll-button(right):disabled,
-.news-carousel::scroll-button(left):disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
+.flyer-card:hover .flyer-media img {
+  transform: scale(1.03);
 }
 
 .more-link {
@@ -1796,8 +1780,7 @@ body.dark-mode .published-footer {
 }
 
 @media (max-width: 640px) {
-
-  #all-news-container{
+  #all-news-container {
     display: flex;
     flex-direction: column;
   }
