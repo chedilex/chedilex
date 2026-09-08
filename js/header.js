@@ -2,26 +2,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerMain = document.getElementById("headerMain");
   if (headerMain) {
     headerMain.innerHTML = `
-            <div class="container no-animation">
+            <div class="container ">
             <nav class="navbar">
                 <a href="#" class="logo">
                     <img src="images/chedilex-logo-removebg.png" alt="logo">
                 </a>
-                <div class="nav-links no-animation" id="navLinks">
+                <div class="nav-links " id="navLinks">
                     <a aria-label="go to home section" href="index.html">Home</a>
                     <a aria-label="go to about section" href="about.html">About</a>
                     <a aria-label="go to portfolio section" href="portfolio.html">Portfolio</a>
                     <a aria-label="go to news section" href="news.html">News</a>
                     <a aria-label="go to contact section" href="contact.html">Contact</a>
                 </div>
-                <div class="no-animation">
+                <div class="">
                     <h1 class="logoName">CHEDILEX</h1>
                 </div>
-                <div class="icons-content no-animation">
-                    <div class="mode-btn no-animation">
-                        <i class="fa-regular fa-sun"></i>
-                    </div>
-                    <div class="mobile-menu-btn no-animation" id="mobileMenuBtn">
+                <div class="icons-content ">
+                    <a href="login.html" class="mode-btn ">
+                      <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                    <div class="mobile-menu-btn " id="mobileMenuBtn">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
@@ -43,9 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h1 class="logoName">CHEDILEX</h1>
                 </div>
                 <div class="icons-content">
-                    <div class="mode-btn">
-                        <i class="fa-regular fa-sun"></i>
-                    </div>
                     <div onclick="window.history.back(); return false;" class="back-btn">
                         <i class="fa-solid fa-arrow-left"></i>
                     </div>
@@ -53,29 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
             </nav>
         </div>
     `;
-  }
-
-  // Theme Logic
-  const modeBtn = document.querySelector(".mode-btn");
-  if (modeBtn) {
-    // Initialize icon based on current theme
-    const isDark = document.body.classList.contains("dark-mode");
-    const themeIcon = modeBtn.querySelector("i");
-    if (themeIcon) {
-      if (isDark) {
-        themeIcon.classList.replace("fa-sun", "fa-moon");
-      } else {
-        themeIcon.classList.replace("fa-moon", "fa-sun");
-      }
-    }
-
-    // Add click listener
-    modeBtn.addEventListener("click", () => {
-      const isCurrentlyDark = document.body.classList.contains("dark-mode");
-      if (typeof setTheme === "function") {
-        setTheme(isCurrentlyDark ? "light" : "dark");
-      }
-    });
   }
 
   // Mobile Menu Toggle

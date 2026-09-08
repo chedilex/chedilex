@@ -39,7 +39,7 @@ footer.innerHTML = `
                     <p><i class="fas fa-clock"></i>Mon-Fri: 9 AM - 6 PM GMT</p>
                 </div>
             </div>
-            <div class="copyright no-animation">
+            <div class="copyright ">
                 <p>&copy; 2026 Chedilex Software Solutions. All rights reserved.</p>
             </div>
         </div>

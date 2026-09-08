@@ -26,20 +26,6 @@
   --nav-link-color: #0f172a;
 }
 
-body.dark-mode {
-  --bg-color: #0f172a;
-  --text-color: #f8fafc;
-  --section-light: #405579;
-  --primary-light: #243247;
-  --light: #1e293b;
-  --gray: #94a3b8;
-  --card-bg: #1e293b;
-  --shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.5);
-  --secondary: #f8fafc;
-  --footer: #0f172a;
-  --nav-link-color: #f8fafc;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -87,14 +73,10 @@ body {
   }
 }
 
-div {
+.animation {
   animation: divAnimations 1s ease-in-out;
   animation-timeline: view();
   animation-range: entry 0 cover 20%;
-}
-
-.no-animation {
-  animation: none;
 }
 
 /* container */
@@ -374,6 +356,7 @@ header {
 }
 
 .mode-btn {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -907,7 +890,7 @@ header {
   gap: 30px;
 }
 
-.portfolio-page-card {
+.portfolio-page-card animation {
   background: var(--card-bg);
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -917,7 +900,7 @@ header {
   border: 1px solid transparent;
 }
 
-.portfolio-page-card::before {
+.portfolio-page-card animation::before {
   content: "";
   position: absolute;
   top: 0;
@@ -929,13 +912,13 @@ header {
   transition: var(--transition);
 }
 
-.portfolio-page-card:hover {
+.portfolio-page-card animation:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
 }
 
-.portfolio-page-card:hover::before {
+.portfolio-page-card animation:hover::before {
   opacity: 1;
 }
 
@@ -1055,7 +1038,7 @@ header {
   font-weight: 500;
 }
 
-.portfolio-page-card.hidden {
+.portfolio-page-card animation.hidden {
   display: none;
 }
 
@@ -1363,9 +1346,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   News & Initiatives Section
-   ========================================================================== */
+/* News & Initiatives Section */
 
 .news-section {
   position: relative;
@@ -1637,66 +1618,6 @@ footer {
   background: var(--light);
 }
 
-/* Dark Mode Overrides */
-body.dark-mode .cookie-banner {
-  border-color: rgba(255, 255, 255, 0.1);
-  background: rgba(30, 41, 59, 0.95);
-}
-
-body.dark-mode .portfolio-item {
-  background: var(--section-light);
-}
-
-body.dark-mode .testimonial-card {
-  background: var(--light);
-}
-
-body.dark-mode .portfolio-content h3 {
-  color: var(--text-color);
-}
-
-body.dark-mode .loaderMain {
-  background: var(--bg-color);
-}
-
-body.dark-mode .portfolio-page-card {
-  background: var(--card-bg);
-}
-
-body.dark-mode .portfolio-card-header h3 {
-  color: var(--text-color);
-}
-
-body.dark-mode .news-card {
-  border-color: rgba(255, 255, 255, 0.1);
-  background: var(--card-bg);
-}
-
-body.dark-mode .news-title {
-  color: var(--text-color);
-}
-
-body.dark-mode .news-carousel::scroll-button(right),
-body.dark-mode .news-carousel::scroll-button(left) {
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-body.dark-mode .article-card-main,
-body.dark-mode .article-loading,
-body.dark-mode .article-error {
-  border-color: rgba(255, 255, 255, 0.1);
-  background: var(--card-bg);
-}
-
-body.dark-mode .article-hero-title h1 {
-  color: var(--text-color);
-}
-
-body.dark-mode .published-footer {
-  border-top-color: rgba(255, 255, 255, 0.1);
-  color: var(--gray);
-}
-
 /* Responsive Design */
 @media (max-width: 992px) {
   .calculator-grid {
@@ -1830,4 +1751,40 @@ body.dark-mode .published-footer {
   .contact-details-content {
     padding-top: 0;
   }
+}
+
+/* login page */
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#requestAccount {
+  display: none;
+}
+
+.registerbtn button {
+  background: transparent;
+  color: var(--primary);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.extrabtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.forget-password {
+  color: var(--primary);
+  font-size: 15px;
 }
