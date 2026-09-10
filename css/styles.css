@@ -90,7 +90,7 @@ body {
   padding: 80px 0;
 }
 
-.sectionLight {
+.light {
   background: var(--section-light);
 }
 
@@ -1383,11 +1383,7 @@ footer {
   flex: 0 0 calc(33.333% - 16px);
   min-width: 300px;
   max-width: 380px;
-  background: var(--card-bg);
-  border: 1px solid var(--gray-light);
-  border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   transition:
@@ -1398,7 +1394,6 @@ footer {
 
 .news-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
 }
 
 /* Card Media */
@@ -1406,15 +1401,18 @@ footer {
   position: relative;
   width: 100%;
   height: 200px;
-  background-color: white;
   overflow: hidden;
 }
 
 .news-card-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease;
+}
+
+.news-card-media .news-cover {
+  background-color: var(--bg-color);
 }
 
 .news-card:hover .news-card-media img {
