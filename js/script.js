@@ -145,3 +145,63 @@ if (typingElement) {
     loop: true,
   });
 }
+
+// custom alert function
+function customAlert(icon, text, bgcol) {
+  const customAlert = document.createElement("div");
+
+  customAlert.style.cssText = `
+    background-color: ${bgcol};
+    color: white;
+    padding: 10px 14px;
+    max-width: 90%;
+    border-radius: 5px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  `;
+
+  customAlert.innerHTML = `
+    <div class="custom-alert-icon" style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.25);
+      font-size: 14px;
+      flex-shrink: 0;
+    ">
+      <i class="${icon}" style="color: white; line-height: 1;"></i>
+    </div>
+    <div class="custom-alert-text">
+      <p style="
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+      ">${text}</p>
+    </div>
+  `;
+
+  document.body.appendChild(customAlert);
+
+  // fade in
+  requestAnimationFrame(() => {
+    customAlert.style.opacity = "1";
+  });
+
+  // fade out + remove
+  setTimeout(() => {
+    customAlert.style.opacity = "0";
+    setTimeout(() => customAlert.remove(), 300);
+  }, 3000);
+}

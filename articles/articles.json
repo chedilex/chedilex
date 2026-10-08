@@ -1,5 +1,13 @@
 [
 {
+  "id": 9,
+  "image": "articles/article-images/mjh.png",
+  "day": "Oct 8, 2026",
+  "title": "Chedilex Tests MJH Website, Delivers New Design Concept",
+  "description": "Chedilex Software Solutions has completed testing of the newly programmed MJH website, a project developed by another team. The client turned to Chedilex based on its strong reputation for quality assurance and expert bug detection. The testing uncovered several issues broken links, form errors, slow-loading pages, and layout problems on mobile devices all documented in a detailed report with recommended fixes. Beyond the technical review, Chedilex found the original design lacking: no icons, weak colors, and no modern visual identity. The team delivered a brand-new design concept featuring a fresh color palette, custom iconography, and a contemporary layout. The client received both the full bug report and the new design another example of Chedilex's trusted, high-quality work.",
+  "link": ""
+},
+{
   "id": 8,
   "image": "articles/article-images/assiamunicipality.jpeg",
   "day": "Aug 28, 2026",
