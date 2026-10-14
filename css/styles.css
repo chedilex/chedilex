@@ -339,40 +339,86 @@ header.header-scrolled {
   flex-wrap: wrap;
 }
 
-/* ---------- Clients marquee ---------- */
+/* ---------- Clients logos ---------- */
 .clients {
   background: var(--light);
+  position: relative;
+  overflow: hidden;
 }
+
+/* soft brand glow behind the marquee */
+.clients::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in srgb, var(--primary) 12%, transparent),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* edge fade so logos dissolve in/out instead of hard clipping */
 .logos {
   width: 100%;
   display: flex;
   overflow: hidden;
+  padding: 20px;
+  position: relative;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
   mask-image: linear-gradient(
     to right,
     transparent,
-    #000 8%,
-    #000 92%,
+    #000 10%,
+    #000 90%,
     transparent
   );
 }
+
 .logos-slide {
   display: flex;
   flex-shrink: 0;
-  gap: 1rem;
-  padding-right: 1rem;
+  align-items: center;
+  gap: 1.25rem;
+  padding-right: 1.25rem;
   animation: infinityscroll 20s linear infinite;
 }
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
 .logos-slide img {
-  flex: 0 0 5em;
-  height: 5em;
-  padding: 1em;
-  border-radius: 0.4em;
-  transition: var(--t);
+  flex: 0 0 8.5em;
+  height: 6.5em;
+  padding: 1.1em;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 14px -8px rgba(15, 23, 42, 0.25);
   object-fit: contain;
+  filter: grayscale(1) opacity(0.65);
+  transition: var(--t);
 }
+
+/* colourise + lift the hovered logo */
 .logos-slide img:hover {
-  transform: scale(1.25);
+  filter: grayscale(0) opacity(1);
+  transform: translateY(-6px) scale(1.06);
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--line));
 }
+
 @keyframes infinityscroll {
   from {
     transform: translateX(0);
@@ -765,19 +811,7 @@ header.header-scrolled {
   object-fit: cover;
   transition: transform 0.5s;
 }
-.news-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  padding: 4px 10px;
-  background: rgba(15, 23, 42, 0.8);
-  color: #fff;
-  border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+
 .news-card-body {
   padding: 20px;
   display: flex;
@@ -1111,12 +1145,12 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  background: var(--card);
 }
 .article-main-img {
   width: 600px;
   height: 350px;
   object-fit: contain;
-  background-color: var(--bg);
   max-height: 500px;
 }
 .full-article {
@@ -1345,7 +1379,7 @@ footer {
 @keyframes revealUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(100px);
   }
   to {
     opacity: 1;
@@ -1355,12 +1389,12 @@ footer {
 .animation {
   animation: revealUp 1s ease-in-out;
   animation-timeline: view();
-  animation-range: entry 0% cover 25%;
+  animation-range: entry 0% cover 30%;
 }
 .reveal {
   animation: revealUp 1s ease-in-out;
   animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  animation-range: entry 0% cover 30%;
 }
 
 /* ---------- Responsive ---------- */
@@ -1409,6 +1443,15 @@ footer {
 @media (max-width: 640px) {
   .section {
     padding: 60px 0;
+  }
+  .logos-slide {
+    gap: 0.9rem;
+    padding-right: 0.9rem;
+  }
+  .logos-slide img {
+    flex: 0 0 6.5em;
+    height: 5em;
+    padding: 0.9em;
   }
   .news-card {
     flex: 0 0 85%;

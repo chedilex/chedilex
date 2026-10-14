@@ -115,6 +115,11 @@
                                 </div>
                                 <div class="full-article">
                                     <div class="full-description">${formattedDescription}</div>
+                                    ${article.desImg != '' ? `
+                                        <div class="article-media-wrapper">
+                                            <img src="${article.desImg}" alt="${article.title || 'News'}" class="article-main-img">
+                                        </div>
+                                    ` : ''}
                                     ${articleLink}
                                     <div class="published-footer">
                                         <p><i class="fas fa-newspaper"></i> Published by</p>

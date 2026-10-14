@@ -4,8 +4,9 @@
   "image": "articles/article-images/mjh.png",
   "day": "Oct 8, 2026",
   "title": "Chedilex Tests MJH Website, Delivers New Design Concept",
-  "description": "Chedilex Software Solutions has completed testing of the newly programmed MJH website, a project developed by another team. The client turned to Chedilex based on its strong reputation for quality assurance and expert bug detection. The testing uncovered several issues broken links, form errors, slow-loading pages, and layout problems on mobile devices all documented in a detailed report with recommended fixes. Beyond the technical review, Chedilex found the original design lacking: no icons, weak colors, and no modern visual identity. The team delivered a brand-new design concept featuring a fresh color palette, custom iconography, and a contemporary layout. The client received both the full bug report and the new design another example of Chedilex's trusted, high-quality work.",
-  "link": ""
+  "description": "Chedilex Software Solutions has completed testing of the newly programmed MJH website, a project developed by another team. The client turned to Chedilex based on its strong reputation for quality assurance and expert bug detection. The testing uncovered several issues broken links, form errors, slow-loading pages, and layout problems on mobile devices all documented in a detailed report with recommended fixes. Beyond the technical review, Chedilex found the original design lacking: no icons, weak colors, and no modern visual identity. The team delivered a brand-new design concept featuring a fresh color palette, custom iconography, and a contemporary layout. The client received both the full bug report and the new design another example of Chedilex's trusted, high-quality work.\n\nMJH driving School UI/UX Redesign:",
+  "desImg" : "articles/article-images/mjh_new_ux.png",
+  "link": "https://michel-hannouch-driving-school.pages.dev/"
 },
 {
   "id": 8,
@@ -13,6 +14,7 @@
   "day": "Aug 28, 2026",
   "title": "Recognition from Assia Municipality & Assia Street Festival 2026",
   "description": "Assia Municipality and the Assia Street Festival 2026 committee expressed their appreciation for our valuable support and contribution to the success of the festival, highlighting our key role in bringing together the community and visitors while promoting Assia as a tourist destination.",
+  "desImg" : "",
   "link": ""
 },
   {
@@ -21,6 +23,7 @@
   "day": "Aug 28, 2026",
   "title": "Introducing TAZKARA: The Ultimate Ticketing Management System.",
   "description": "Meet TAZKARA, our proprietary ticketing management platform designed to streamline event operations. Featuring seamless multi-tier ticket booking, real-time admission tracking, and secure QR code verification, TAZKARA provides organizers with a powerful, all-in-one digital solution for festivals and large-scale events.",
+  "desImg" : "",
   "link": ""
 },
     {
@@ -29,6 +32,7 @@
     "day": "Feb 12, 2026",
     "title": "Founder of Chedilex invited to participate in the launch of ARC in AOU Lebanon",
     "description": "Chedilex founder invited to participate in the launch of the Annual Robotics Competition (ARC) at the Arab Open University Tripoli branch in Lebanon. This initiative aims to foster innovation, and development in the field of robotics, providing a platform for students and professionals to explore cutting-edge technologies and their applications.",
+    "desImg" : "",
     "link": ""
     },
     {
@@ -37,6 +41,7 @@
     "day": "Jan 28, 2026",
     "title": "Bibliotec Student Information System is Now Live.",
     "description": "Our team is proud to announce the official launch of the Bibliotec Student Information System. Engineered to centralize academic management, this digital platform streamline student enrollment, grade tracking, course scheduling, and administrative workflows with a fast, secure, and user-friendly interface.",
+    "desImg" : "",
     "link": ""
     },
     {
@@ -45,6 +50,7 @@
     "day": "Jul 14, 2026",
     "title": "Ticketing System Proudly Supports Assia Street Festival.",
     "description": "Our Ticketing System was developed as a sponsoring contribution to the Assia Street Festival, providing visitors with a fast, secure, and seamless way to book event tickets online. This initiative reflects our commitment to supporting local events through innovative digital solutions and enhancing the overall festival experience.",
+    "desImg" : "",
     "link": ""
     },
     {
@@ -53,6 +59,7 @@
     "title": "Chedilex has been appointed the official managing website for Live-Love-Assia.",
     "day": "Apr 25, 2026",
     "description": "Chedilex has officially been appointed as the managing entity for the Live-Love-Assia website, marking an important milestone in the platform’s development. Following an extended period of dedicated work, the project has now been successfully launched, reflecting a strong commitment to delivering a high-quality digital experience for the Assia community and its visitors.\n\nThis collaboration represents a significant step forward in enhancing digital access to local information and community engagement, further strengthening the connection between the platform and its audience.",
+    "desImg" : "",
     "link": ""
     },
     {
@@ -61,6 +68,7 @@
     "title": "New Opportunity to Organize Restaurants with TexasPOS",
     "day": "May 12, 2026",
     "description": "Restaurants today need speed, accuracy, and smart management to stay ahead. With TexasPOS, restaurant owners now have a new opportunity to organize their business more efficiently and deliver a better customer experience.\n\nTexasPOS helps manage orders, tables, payments, and inventory in one easy system. From dine-in and takeaway to delivery management, the platform simplifies daily operations and reduces mistakes inside the restaurant. Staff can process orders faster, while managers can monitor sales and performance in real time.\n\nThe system also provides detailed reports and analytics, helping restaurant owners make smarter business decisions and improve profitability. With its modern and user-friendly interface, TexasPOS is designed to support restaurants of all sizes looking to grow and stay organized in a competitive market.",
+    "desImg" : "",
     "link": ""
     },
     {
@@ -69,6 +77,7 @@
     "title": "What happened on the IEEE AOU website?",
     "day": "Mar 21, 2026",
     "description": "The IEEE AOU website was hacked because its design was outdated. A new user interface was designed by Chedilex, which is now managing the official website for the student branch at Arab Open University.",
+    "desImg" : "",
     "link": "https://ieee.aou.edu.lb"
     }
 ]
