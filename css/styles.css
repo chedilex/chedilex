@@ -1359,7 +1359,7 @@ footer {
 .animation {
   animation: revealUp 1s ease-in-out;
   animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+  animation-range: entry 0% cover 25%;
 }
 
 /* ---------- Responsive ---------- */
