@@ -117,7 +117,7 @@
                                     <div class="full-description">${formattedDescription}</div>
                                     ${article.desImg != '' ? `
                                         <div class="article-media-wrapper">
-                                            <img src="${article.desImg}" alt="${article.title || 'News'}" class="article-main-img">
+                                            <img src="${article.desImg}" alt="${article.title || 'News'}" class="article-main-img" loading="lazy">
                                         </div>
                                     ` : ''}
                                     ${articleLink}
