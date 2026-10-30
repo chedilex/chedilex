@@ -1,5 +1,14 @@
 [
 {
+  "id": 10,
+  "image": "articles/article-images/liveloveassiaflyer.jpeg",
+  "day": "Oct 30, 2026",
+  "title": "We've officially redesigned the Live Love Assia website that we previously developed!",
+  "description": "We're excited to unveil the redesigned Live Love Assia website, featuring a refreshed modern design, improved navigation, and an enhanced browsing experience. Explore Assia like never before through a more engaging digital experience that showcases the village's natural beauty, rich heritage, landmarks, and unique charm.\n\nSame village, same soul — a fresh new digital experience!",
+  "desImg": "",
+  "link": "https://assiavillage.netlify.app"
+},
+{
   "id": 9,
   "image": "articles/article-images/mjh.png",
   "day": "Oct 8, 2026",
@@ -55,7 +64,7 @@
     },
     {
     "id": 2,
-    "image": "",
+    "image": "articles/article-images/chedilex x assia.png",
     "title": "Chedilex has been appointed the official managing website for Live-Love-Assia.",
     "day": "Apr 25, 2026",
     "description": "Chedilex has officially been appointed as the managing entity for the Live-Love-Assia website, marking an important milestone in the platform’s development. Following an extended period of dedicated work, the project has now been successfully launched, reflecting a strong commitment to delivering a high-quality digital experience for the Assia community and its visitors.\n\nThis collaboration represents a significant step forward in enhancing digital access to local information and community engagement, further strengthening the connection between the platform and its audience.",
