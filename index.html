@@ -1,447 +1,762 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="Chedilex, chedix, software development, custom software, mobile apps, cybersecurity, data analytics, web development, software solutions">
-    <meta name="description"
-        content="Chedilex Software Solutions delivers innovative, scalable software development services including custom applications, web development, cybersecurity, and data analytics to drive business growth.">
-    <meta name="author" content="Eng. Tony EL Chediac">
-    <meta name="theme-color" content="#1d4ed8">
-    <meta name="robots" content="index, follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Chedilex, chedix, software development, custom software, mobile apps, cybersecurity, data analytics, web development, software solutions"
+    />
+    <meta
+      name="description"
+      content="Chedilex Software Solutions delivers innovative, scalable software development services including custom applications, web development, cybersecurity, and data analytics to drive business growth."
+    />
+    <meta name="author" content="Eng. Tony EL Chediac" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <meta name="robots" content="index, follow" />
     <title>Chedilex | Software Solutions</title>
-    <link rel="icon" type="image/png" href="images/chedilex-logo-removebg.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="canonical" href="https://chedilex.netlify.app/">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-</head>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/chedilex-logo-removebg.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="canonical" href="https://chedilex.netlify.app/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  </head>
 
-<body>
-
-    <!-- Loader -->
-    <div class="loaderMain" id="loader">
-        <div class="loader"><img src="images/chedilex.new.logo.jpeg" alt="logo"></div>
+  <body>
+    <div id="particles-js" aria-hidden="true"></div>
+    <div class="loader">
+      <div class="loader-content">
+        <img src="images/chedilex.new.logo.jpeg" alt="chedilex-logo" />
+        <div class="loader-line"><span></span></div>
+      </div>
     </div>
 
-    <button id="backToTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
-    <div id="particles-js"></div>
+    <header class="navbar">
+      <a href="#home" class="logo">
+        <img src="images/chedilex-logo-removebg.png" alt="logo" />
+      </a>
 
-    <header id="headerMain"></header>
+      <p class="company-name">
+        CHE<span>DILEX</span><small>SOFTWARE SOLUTIONS</small>
+      </p>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>Engineering Digital<br><span class="typing"></span><br>For Tomorrow's Businesses</h1>
-            <p>Chedilex transforms ideas into powerful software solutions. With over 4 years of expertise, we deliver
-                scalable, secure, and innovative applications that drive business growth.</p>
-            <div class="hero-btns">
-                <a href="#portfolio" class="btn">View Our Work</a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">What We Do</a>
+        <a href="#projects">Projects</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="nav-cta">
+        Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-bg-shape shape-one"></div>
+        <div class="hero-bg-shape shape-two"></div>
+
+        <div class="hero-content">
+          <h1 class="hero-title">
+            We build<br />
+            <span class="outline-text">digital</span>
+            <span class="blue-text">possibilities.</span>
+          </h1>
+
+          <p class="hero-description reveal">
+            Chedilex transforms ideas into powerful software solutions. With
+            over 4 years of expertise, we deliver scalable, secure, and
+            innovative applications that drive business growth
+          </p>
+
+          <div class="hero-buttons reveal">
+            <a href="#services" class="primary-btn">
+              Explore What We Do
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+            <a href="#projects" class="secondary-btn">
+              View Our Work
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="hero-bottom reveal">
+            <span>SCROLL TO DISCOVER</span>
+            <div class="scroll-indicator">
+              <span></span>
             </div>
+            <span>01 / 05</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Clients -->
-    <section class="section clients" id="clients">
-        <div class="container">
-            <div class="section-title">
-                <h2>Trusted by Industry Leaders</h2>
-                <p>We partner with forward-thinking companies across various sectors to deliver exceptional software
-                    solutions.</p>
-            </div>
-            <div class="logos-grid">
-                <img src="clients/AOU Logo.png" alt="aou" loading="eager" class="animation">
-                <img src="clients/ieeeaou.png" alt="ieee aou" loading="eager" class="animation">
-                <img src="clients/mgo3.png" alt="mgo3" loading="eager" class="animation">
-                <img src="clients/MJHLogo.png" alt="mjh logo" loading="eager" class="animation">
-                <img src="clients/liveloveassia.png" alt="live love assia" loading="eager" class="animation">
-                <img src="clients/assia street festival logo.png" alt="asf" loading="eager" class="animation">
-                <img src="clients/micheallogo.png" alt="micheal sound and light" loading="eager" class="animation">
-                <img src="clients/meltica logo.png" alt="meltica" loading="eager" class="animation">
-                <img src="clients/neofortix.png" alt="neofortix" loading="eager" class="animation">
-                <img src="clients/studiolys.png" alt="studiolys" loading="eager" class="animation">
-            </div>
+        <div class="hero-visual">
+          <div class="visual-circle circle-outer"></div>
+          <div class="visual-circle circle-middle"></div>
+          <div class="visual-circle circle-inner"></div>
+
+          <div class="visual-core">
+            <span>CH</span>
+          </div>
+
+          <div class="floating-card card-top">
+            <i class="fa-solid fa-code"></i>
+            <span>Development</span>
+          </div>
+
+          <div class="floating-card card-bottom">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span>Innovation</span>
+          </div>
         </div>
-    </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Chedilex</h2>
-                <p>Founded on the principles of innovation and reliability</p>
-            </div>
-            <p class="animation">
-                Chedilex Software Solutions, a new company based in Batroun, has been at the forefront of the tech
-                industry. We are not just coders, we are problem solvers, architects, and visionaries.
-                <br><br>
-                Our team consists of top engineering talent dedicated to delivering clean, efficient, and scalable code.
+        <div class="hero-number">01</div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about section-padding" id="about">
+        <div class="section-label reveal">
+          <span>WHO WE ARE</span>
+          <div></div>
+        </div>
+
+        <div class="about-grid">
+          <h2 class="about-heading reveal">
+            Technology is<br />
+            our language.<br />
+            <span>Innovation is<br />our mindset.</span>
+          </h2>
+
+          <div class="about-content reveal">
+            <p>
+              CHEDILEX is a software solutions company focused on creating
+              meaningful digital experiences through technology, creativity, and
+              innovation.
             </p>
-            <div class="stats-container animation">
-                <div class="stat-box">
-                    <h1>43+</h1>
-                    <p>Projects Done</p>
-                </div>
-                <div class="stat-box">
-                    <h1>98%</h1>
-                    <p>Client Retention</p>
-                </div>
-                <div class="stat-box">
-                    <h1>4+</h1>
-                    <p>Years Experience</p>
-                </div>
-            </div>
+
+            <p>
+              From modern websites to intelligent applications, we turn complex
+              challenges into elegant digital solutions.
+            </p>
+
+            <a href="#contact" class="text-link">
+              Discover CHEDILEX
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-    </section>
 
-    <!-- Expertise -->
-    <section id="services" class="section services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Expertise</h2>
-                <p>High-performance solutions for complex problems</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="service-card animation"><i class="fas fa-project-diagram"></i>
-                    <h3>Software Engineering</h3>
-                    <p>Building high-performance back-end systems and scalable enterprise architecture for complex
-                        logic.</p>
-                </div>
-                <div class="service-card animation"><i class="fas fa-layer-group"></i>
-                    <h3>Full-Stack Web Development</h3>
-                    <p>Comprehensive end-to-end web solutions, bridging the gap between stunning UI and powerful server
-                        architecture.</p>
-                </div>
-                <div class="service-card animation"><i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Design & Redesign</h3>
-                    <p>Intuitive, user-centered interfaces and complete digital redesigns crafted to boost engagement,
-                        conversion, and user satisfaction.</p>
-                </div>
+        <div class="about-bottom">
+          <div class="about-stat reveal">
+            <span class="stat-number">01</span>
+            <span>Think differently.</span>
+          </div>
 
-                <div class="service-card animation"><i class="fas fa-laptop-code"></i>
-                    <h3>Software Solutions</h3>
-                    <p>Professional tailor-made software designed to fit your specific business processes and scale as
-                        you grow.</p>
-                </div>
-                <div class="service-card animation"><i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile Engineering</h3>
-                    <p>Native and cross-platform mobile applications for iOS and Android that provide seamless user
-                        experiences.</p>
-                </div>
-                <div class="service-card animation"><i class="fas fa-shield-alt"></i>
-                    <h3>Simple Cybersecurity</h3>
-                    <p>Rigorous security audits and implementation to protect your data and intellectual property.</p>
-                </div>
-                <div class="service-card animation"><i class="fas fa-brain"></i>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Integrating intelligent algorithms to automate tasks and provide deep data insights.</p>
-                </div>
-                <div class="service-card animation"><i class="fas fa-database"></i>
-                    <h3>Data Analytics</h3>
-                    <p>Turning raw data into actionable business intelligence through advanced visualization.</p>
-                </div>
-            </div>
+          <div class="about-stat reveal">
+            <span class="stat-number">02</span>
+            <span>Build intelligently.</span>
+          </div>
+
+          <div class="about-stat reveal">
+            <span class="stat-number">03</span>
+            <span>Create impact.</span>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Projects We've Built (NEW section replacing flyers) -->
-    <section class="section light" id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Projects We've Built</h2>
-                <p>Real products, live in the wild. Click any project to explore what we designed, built, and shipped.
-                </p>
-                <p style="color: rgb(255, 129, 129); margin-top: 20px; font-size: 12px;">N.B: Projects here is a
-                    Frontend showcase, some of them are private and you can't access them.
-                    This is a showcase
-                    of what we can
-                    do!</p>
-            </div>
-            <div class="portfolio-grid">
-
-                <a href="https://bibliotec.zya.me" target="_blank" rel="noopener" class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/bibliotec.png" alt="Bibliotec Student Information System" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Bibliotec — Student Information System</h3>
-                        <p>A full-featured online SIS agenda platform with AI-powered recommendations, real-time
-                            inventory management, and seamless payment integration.</p>
-                        <div class="portfolio-tags"><span>SIS</span></div>
-                    </div>
-                </a>
-
-                <a href="https://chedilex.github.io/blackirongym" target="_blank" rel="noopener"
-                    class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/black_iron_gym.png" alt="Black Iron Gym Website" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Black Iron Gym</h3>
-                        <p>A modern gym website featuring class schedules, trainer profiles, membership plans, and
-                            online sign-up with a bold, high-energy design.</p>
-                        <div class="portfolio-tags"><span>Full-Stack</span></div>
-                    </div>
-                </a>
-
-                <a onclick="customAlert('fa-solid fa-lock', 'This is a private polyclinic system, you don\'t have access to it.', 'crimson')"
-                    target="_blank" rel="noopener" class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/medicarex.png" alt="MediCareX System" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>MediCareX — Medical Center System</h3>
-                        <p>A comprehensive medical center management system for hospitals with patient records,
-                            appointment scheduling, and telemedicine capabilities.</p>
-                        <div class="portfolio-tags"><span>Healthcare</span></div>
-                    </div>
-                </a>
-
-                <a href="https://assiavillage.netlify.app" target="_blank" rel="noopener"
-                    class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/assiavillage.png" alt="Assia Village" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Assia Village</h3>
-                        <p>A tourism and local discovery platform showcasing the landmarks, attractions, and points of
-                            interest in Assia Village.</p>
-                        <div class="portfolio-tags"><span>Community</span></div>
-                    </div>
-                </a>
-
-                <a onclick="customAlert('fa-solid fa-lock', 'This is a private ticketing system, you don\'t have access to it.', 'crimson')"
-                    target="_blank" rel="noopener" class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/tazkara.png" alt="Tazkara Ticketing Platform" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Ticketing Management System</h3>
-                        <p>An easy-to-use platform for browsing events and purchasing tickets online. Seamless booking
-                            with secure payments and instant ticket confirmation.</p>
-                        <div class="portfolio-tags"><span>Full-Stack</span></div>
-                    </div>
-                </a>
-
-                <a href="https://ieee.aou.edu.lb" target="_blank" rel="noopener" class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/ieeeaou.png" alt="IEEE AOU Official Website" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>IEEE AOU Official Website</h3>
-                        <p>The official website for the IEEE AOU student branch — featuring events, announcements,
-                            member registration, and resources for the student community.</p>
-                        <div class="portfolio-tags"><span>Web App</span></div>
-                    </div>
-                </a>
-
-                <a onclick="customAlert('fa-solid fa-warning', 'This Digital Menu is under update, You can\'t access it right now.', 'orange')"
-                    target="_blank" rel="noopener" class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/captains_pizza.png" alt="Digital Menu Platform" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Online Ordering Digital Menu</h3>
-                        <p>A QR-driven, always up-to-date digital menu for restaurants with instant editing and
-                            multi-language support.</p>
-                        <div class="portfolio-tags"><span>Web App</span></div>
-                    </div>
-                </a>
-
-                <a onclick="customAlert('fa-solid fa-lock', 'This is a private T.M. system, you don\'t have access to it.', 'crimson')"
-                    target="_blank" rel="noopener" class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/taskMS.png" alt="Task Management System" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Task Management System</h3>
-                        <p>A full-featured online task management platform with real-time updates accessed by teams and
-                            individuals.</p>
-                        <div class="portfolio-tags"><span>Web App</span></div>
-                    </div>
-                </a>
-
-                <a href="https://bpress.zya.me" target="_blank" rel="noopener" class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/news.png" alt="News Publishing Website" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>News Publishing Website</h3>
-                        <p>Advanced publishing platform with real-time data visualization, editorial workflows, and
-                            automated reporting for media firms.</p>
-                        <div class="portfolio-tags"><span>CMS</span></div>
-                    </div>
-                </a>
-
-                <a onclick="customAlert('fa-solid fa-lock', 'This is a private POS system, you don\'t have access to it.', 'crimson')"
-                    target="_blank" rel="noopener" class="project-card animation">
-                    <div class="project-media">
-                        <img src="projects/pos.png" alt="POS System" loading="lazy"
-                            onerror="this.onerror=null;this.src='images/chedilex.new.logo.jpeg';this.style.objectFit='contain';this.style.padding='20px';">
-                        <span class="arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
-                    </div>
-                    <div class="project-body">
-                        <h3>POS System</h3>
-                        <p>An Online / Offline POS system for retail stores, restaurants, and small businesses with
-                            inventory management, sales tracking, and customer management.</p>
-                        <div class="portfolio-tags"><span>POS</span></div>
-                    </div>
-                </a>
-
-            </div>
-            <div class="more-link">
-                <a href="contact.html" class="btn btn-outline"><span>Start Your Project</span><i
-                        class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- News (updated) -->
-    <section class="section" id="news">
-        <div class="container">
-            <div class="section-title">
-                <h2>News & Initiatives</h2>
-                <p style="margin-bottom: 20px;">Stay updated with our latest company news, insights, and technological
-                    advancements.</p>
-                <a href="news.html" class="btn btn-outline" style="flex-shrink:0;"><span>Explore All Articles</span><i
-                        class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="news-carousel" id="news-article">
-                <div class="news-card" style="opacity:.35;height:340px;"></div>
-                <div class="news-card" style="opacity:.35;height:340px;"></div>
-                <div class="news-card" style="opacity:.35;height:340px;"></div>
+      <!-- SERVICES: PINNED STACKING SCROLL -->
+      <section class="services" id="services">
+        <div class="services-pin">
+          <div class="services-header">
+            <div class="section-label">
+              <span>WHAT WE DO</span>
+              <div></div>
             </div>
 
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const newsContainer = document.getElementById("news-article");
-                    fetch("articles/articles.json")
-                        .then(res => res.json())
-                        .then(allData => {
-                            const data = allData.slice(0, 3);
-                            let output = "";
-                            data.forEach(article => {
-                                const displayImage = (article.image && article.image.trim() !== "") ? article.image : 'images/chedilex.new.logo.jpeg';
-                                output += `
-                  <article class="news-card">
-                    <div class="news-card-media">
-                      <img src="${displayImage}" alt="${article.title}" loading="lazy">
-                    </div>
-                    <div class="news-card-body">
-                      <div class="news-meta"><i class="far fa-calendar-alt"></i><span>${article.day}</span></div>
-                      <h3 class="news-title">${article.title}</h3>
-                      <a href="article.html?id=${article.id}" class="news-link">Read Article <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                  </article>`;
-                            });
-                            newsContainer.innerHTML = output;
-                        })
-                        .catch(err => {
-                            console.error("Error fetching news data:", err);
-                            newsContainer.innerHTML = `<p style="text-align:center;color:var(--gray);width:100%;">Unable to load articles right now.</p>`;
-                        });
-                });
-            </script>
-        </div>
-    </section>
+            <div class="services-intro">
+              <h2>
+                Ideas into<br />
+                <span>digital reality.</span>
+              </h2>
 
-    <!-- Testimonials -->
-    <section class="section testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>See what our clients say about working with Chedilex on their software projects.</p>
+              <p>
+                Scroll to explore our capabilities. One vision. Multiple
+                possibilities.
+              </p>
             </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-card animation">
-                    <div class="testimonial-content">"Working with Chedilex transformed our digital presence. Their team
-                        delivered a robust e-agenda platform that increased our online work by 240% in just 6 months.
-                        Their attention to detail and technical expertise exceeded our expectations."</div>
-                    <div class="author-info">
-                        <h2>Ms. Marie B.</h2>
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    </div>
+          </div>
+
+          <div class="services-stack">
+            <article class="service-card service-one">
+              <div class="service-card-top">
+                <span>01 / 05</span>
+                <span>DESIGN & EXPERIENCE</span>
+              </div>
+
+              <div class="service-card-content">
+                <div>
+                  <h3>Web Design &<br />Development</h3>
+                  <p>
+                    High-performance websites with exceptional design, seamless
+                    interactions, and unforgettable user experiences.
+                  </p>
+
+                  <div class="service-tags">
+                    <span>HTML / CSS</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>UI / UX</span>
+                  </div>
                 </div>
-                <div class="testimonial-card animation">
-                    <div class="testimonial-content">"The MediCareX dashboard Chedilex developed revolutionized how our
-                        hospital manages patient data. The system is intuitive, secure, and scalable. Their team was
-                        professional, responsive, and delivered ahead of schedule."</div>
-                    <div class="author-info">
-                        <h2>Dr. Michael K.</h2>
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
+
+                <div class="service-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
                 </div>
-                <div class="testimonial-card animation">
-                    <div class="testimonial-content">"Chedilex took our complex e-commerce requirements and turned the
-                        UI/UX into elegant frontend code. Their solution helped us reduce operational costs by 35% while
-                        improving data accuracy and reporting capabilities."</div>
-                    <div class="author-info">
-                        <h2>Mr. Robert A.</h2>
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    </div>
+              </div>
+
+              <span class="service-card-index">01</span>
+            </article>
+
+            <article class="service-card service-two">
+              <div class="service-card-top">
+                <span>02 / 05</span>
+                <span>APPLICATION ENGINEERING</span>
+              </div>
+
+              <div class="service-card-content">
+                <div>
+                  <h3>Software &<br />Application Development</h3>
+                  <p>
+                    Custom software solutions and powerful applications
+                    engineered to simplify operations and solve real-world
+                    problems.
+                  </p>
+
+                  <div class="service-tags">
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>PHP</span>
+                    <span>Flutter</span>
+                  </div>
                 </div>
+
+                <div class="service-icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+              </div>
+
+              <span class="service-card-index">02</span>
+            </article>
+
+            <article class="service-card service-three">
+              <div class="service-card-top">
+                <span>03 / 05</span>
+                <span>INTELLIGENT TECHNOLOGY</span>
+              </div>
+
+              <div class="service-card-content">
+                <div>
+                  <h3>AI & Emerging<br />Technologies</h3>
+                  <p>
+                    Exploring intelligent solutions, automation, machine
+                    learning, and emerging technologies to create smarter
+                    digital experiences.
+                  </p>
+
+                  <div class="service-tags">
+                    <span>AI</span>
+                    <span>Machine Learning</span>
+                    <span>Automation</span>
+                  </div>
+                </div>
+
+                <div class="service-icon">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+              </div>
+
+              <span class="service-card-index">03</span>
+            </article>
+
+            <article class="service-card service-four">
+              <div class="service-card-top">
+                <span>04 / 05</span>
+                <span>DIGITAL INFRASTRUCTURE</span>
+              </div>
+
+              <div class="service-card-content">
+                <div>
+                  <h3>Database &<br />Backend Solutions</h3>
+                  <p>
+                    Secure, scalable, and reliable backend architectures that
+                    power modern digital products.
+                  </p>
+
+                  <div class="service-tags">
+                    <span>SQL</span>
+                    <span>Supabase</span>
+                    <span>APIs</span>
+                    <span>Node.js</span>
+                  </div>
+                </div>
+
+                <div class="service-icon">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+              </div>
+
+              <span class="service-card-index">04</span>
+            </article>
+
+            <article class="service-card service-five">
+              <div class="service-card-top">
+                <span>05 / 05</span>
+                <span>DIGITAL TRANSFORMATION</span>
+              </div>
+
+              <div class="service-card-content">
+                <div>
+                  <h3>IT Solutions &<br />Consulting</h3>
+                  <p>
+                    Strategic technology consulting and digital solutions that
+                    help organizations evolve and grow.
+                  </p>
+
+                  <div class="service-tags">
+                    <span>IT Consulting</span>
+                    <span>Integration</span>
+                    <span>Optimization</span>
+                  </div>
+                </div>
+
+                <div class="service-icon">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+              </div>
+
+              <span class="service-card-index">05</span>
+            </article>
+          </div>
+
+          <div class="services-progress">
+            <span class="progress-current">01</span>
+            <div class="progress-track"><span></span></div>
+            <span>05</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="projects section-padding" id="projects">
+        <div class="section-label reveal">
+          <span>SELECTED WORK</span>
+          <div></div>
+        </div>
+
+        <div class="projects-heading reveal">
+          <h2>Built with purpose.<br /><span>Designed to matter.</span></h2>
+          <p>
+            Digital experiences that combine creativity, technology, and
+            functionality.
+          </p>
+        </div>
+
+        <!-- 1rst grid -->
+        <div class="projects-grid">
+          <a
+            href="https://assiavillage.netlify.app"
+            class="project-card project-large reveal"
+          >
+            <div class="project-image">
+              <img src="projects/assiavillage.png" alt="assia village" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
             </div>
-        </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="section" id="contact">
-        <div class="container animation">
-            <div class="contact-cta">
-                <h2>Ready to Start Your Project?</h2>
-                <p>Get a personalized quote and timeline for your software development project. Our experts will analyze
-                    your requirements and provide a detailed proposal.</p>
-                <a href="mailto:chedilex@gmail.com" class="btn cta-btn"><i class="fas fa-envelope"></i> Contact Our
-                    Team</a>
+            <div class="project-info">
+              <div>
+                <h3>Assia Village</h3>
+                <span>Web Development / UI Design</span>
+              </div>
+              <span>01</span>
             </div>
-        </div>
-    </section>
+          </a>
 
-    <footer></footer>
+          <a
+            onclick="alertfunction('under development.')"
+            class="project-card reveal"
+          >
+            <div class="project-image">
+              <img src="projects/captains_pizza.png" alt="captain's pizza" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </div>
 
-    <!-- Cookie banner -->
-    <div id="cookieBanner" class="cookie-banner">
-        <div class="cookie-content">
-            <h4>Cookie Consent</h4>
-            <p>We use cookies to enhance your experience and save your preferences like theme mode. Do you accept the
-                use of cookies?</p>
-        </div>
-        <div class="cookie-btns">
-            <button id="acceptCookies" class="cookie-btn accept-btn">Accept</button>
-            <button id="declineCookies" class="cookie-btn decline-btn">Decline</button>
-        </div>
-    </div>
+            <div class="project-info">
+              <div>
+                <h3>Menu Applications</h3>
+                <span>Web Software</span>
+              </div>
+              <span>02</span>
+            </div>
+          </a>
 
+          <a href="https://bibliotec.zya.me" class="project-card reveal">
+            <div class="project-image">
+              <img src="projects/bibliotec.png" alt="bibliotec" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3>Student Information System</h3>
+                <span>Web / App   Software Development</span>
+              </div>
+              <span>03</span>
+            </div>
+          </a>
+
+          <a
+            onclick="
+              alertfunction('Private Project: <br> You can\'t access it')
+            "
+            class="project-card project-large reveal"
+          >
+            <div class="project-image">
+              <img src="projects/medicarex.png" alt="medicarex" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3>Clinic Management System</h3>
+                <span>Software Development</span>
+              </div>
+              <span>04</span>
+            </div>
+          </a>
+
+          <a
+            onclick="
+              alertfunction('Private Project: <br> You can\'t access it')
+            "
+            class="project-card reveal"
+          >
+            <div class="project-image">
+              <img src="projects/taskMS.png" alt="taskflow" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3>Task Management System</h3>
+                <span>Web / App Software</span>
+              </div>
+              <span>05</span>
+            </div>
+          </a>
+
+          <a
+            href="https://chedilex.github.io/blackirongym"
+            class="project-card reveal"
+          >
+            <div class="project-image">
+              <img src="projects/black_iron_gym.png" alt="black iron gym" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3>Custom Solutions</h3>
+                <span>Software Engineering</span>
+              </div>
+              <span>06</span>
+            </div>
+          </a>
+
+          <a
+            href="https://bpress.zya.me"
+            class="project-card project-large reveal"
+          >
+            <div class="project-image">
+              <img src="projects/news.png" alt="news" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3>News Software</h3>
+                <span>Web / App Software</span>
+              </div>
+              <span>07</span>
+            </div>
+          </a>
+
+          <a href="https://ieee.aou.edu.lb" class="project-card reveal">
+            <div class="project-image">
+              <img src="projects/ieeeaou.png" alt="ieee aou" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3>POS Solutions</h3>
+                <span>Software Engineering</span>
+              </div>
+              <span>08</span>
+            </div>
+          </a>
+
+          <a
+            onclick="
+              alertfunction('Private Project: <br> You can\'t access it')
+            "
+            class="project-card reveal"
+          >
+            <div class="project-image">
+              <img src="projects/pos.png" alt="pos" />
+              <span class="project-view">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3>Custom Solutions</h3>
+                <span>Software Engineering</span>
+              </div>
+              <span>09</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- CLIENTS -->
+      <section class="clients section-padding" id="clients">
+        <div class="section-label reveal">
+          <span>CLIENTS & PARTNERS</span>
+          <div></div>
+        </div>
+
+        <div class="clients-heading reveal">
+          <h2>Trusted by<br /><span>ambitious teams.</span></h2>
+          <p>
+            A selection of the clients and partners we have the privilege to
+            work with.
+          </p>
+        </div>
+
+        <div class="clients-grid" aria-label="Our clients">
+          <div class="client-card">
+            <span class="client-mark">IEEE AOU</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">Arab Open University</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">MGO3</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">MJH Driving School</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">Live Love Assia</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">Assia Street Festival</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">MS Sound & Light</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">StudioLYS.LB</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">Meltica</span>
+          </div>
+          <div class="client-card">
+            <span class="client-mark">Neofortix</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="process" id="approach">
+        <div class="process-pin">
+          <div class="approach-wordmark" aria-hidden="true">OUR APPROACH</div>
+
+          <div class="process-content">
+            <div class="section-label">
+              <span>OUR APPROACH</span>
+              <div></div>
+            </div>
+
+            <h2 class="process-heading">
+              From vision<br />to <span>reality.</span>
+            </h2>
+
+            <div class="process-grid">
+              <div class="process-item">
+                <span>01</span>
+                <i class="fa-regular fa-lightbulb"></i>
+                <h3>Discover</h3>
+                <p>Understanding your vision, goals, and challenges.</p>
+              </div>
+
+              <div class="process-item">
+                <span>02</span>
+                <i class="fa-solid fa-pen-ruler"></i>
+                <h3>Design</h3>
+                <p>Planning and creating meaningful digital experiences.</p>
+              </div>
+
+              <div class="process-item">
+                <span>03</span>
+                <i class="fa-solid fa-code"></i>
+                <h3>Develop</h3>
+                <p>Turning concepts into functional digital products.</p>
+              </div>
+
+              <div class="process-item">
+                <span>04</span>
+                <i class="fa-solid fa-rocket"></i>
+                <h3>Deliver</h3>
+                <p>Launching, improving, and moving forward.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact section-padding" id="contact">
+        <div class="contact-background"></div>
+
+        <div class="section-label reveal">
+          <span>LET'S CONNECT</span>
+          <div></div>
+        </div>
+
+        <div class="contact-content reveal">
+          <span class="contact-small">HAVE AN IDEA?</span>
+
+          <h2>
+            Let's create<br />
+            something <span>extraordinary.</span>
+          </h2>
+
+          <p>
+            Every great digital experience starts with an idea. Let's bring
+            yours to life.
+          </p>
+
+          <a href="mailto:info@chedilex.com" class="contact-btn">
+            Start a Conversation
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="contact-decoration">CH</div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#home" class="logo footer-logo">
+            CHE<span>DILEX</span> <br />
+            <small>SOFTWARE SOLUTIONS</small>
+          </a>
+          <p>Building tomorrow's digital experiences, one idea at a time.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a
+              href="https://www.linkedin.com/company/chedilex/"
+              aria-label="CHEDILEX on LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.threads.com/@chedilex"
+              aria-label="CHEDILEX on Threads"
+              ><i class="fa-brands fa-threads"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/chedilex/"
+              aria-label="CHEDILEX on Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h2>Explore</h2>
+          <a href="#about">About</a>
+          <a href="#services">What We Do</a>
+          <a href="#projects">Projects</a>
+          <a href="#clients">Clients</a>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h2>Get in touch</h2>
+          <a href="mailto:chedilex@gmail.com"
+            ><i class="fa-regular fa-envelope"></i> chedilex@gmail.com</a
+          >
+          <a href="tel:+96171096971"
+            ><i class="fa-solid fa-phone"></i> +961 71 096 971</a
+          >
+          <a href="#contact"
+            ><i class="fa-solid fa-arrow-right"></i> Start a project</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span
+          >©
+          <span id="year"></span>
+          CHEDILEX. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+
+    <button class="back-top" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.6"></script>
-    <script src="js/script.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/footer.js"></script>
     <script src="js/particles.js"></script>
-</body>
-
+    <script src="js/script.js" defer></script>
+  </body>
 </html>
