@@ -941,9 +941,9 @@ a {
   will-change: transform, opacity;
 }
 
-.process-heading {
-  margin-top: 65px;
-}
+/* .process-heading {
+    margin-top: 65px;
+  } */
 
 .process-grid {
   display: grid;
